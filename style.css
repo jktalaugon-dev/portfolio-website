@@ -391,6 +391,45 @@ h3 {
   margin-top: 7px;
 }
 
+.project-card {
+  cursor: pointer;
+}
+
+.project-card:hover, .project-card:focus-visible {
+  border-color: #3478d4;
+}
+
+.project-card:focus-visible {
+  outline: 3px solid #3478d4;
+  outline-offset: 4px;
+}
+
+.project-card:focus-visible .project-image img {
+  transform: scale(1.065);
+}
+
+.project-indicator {
+  display: block;
+  margin-top: 20px;
+  color: #3478d4;
+  font-weight: 700;
+  text-align: right;
+  transition: color .25s, transform .3s var(--ease);
+}
+
+.project-card:hover .project-indicator, .project-card:focus-visible .project-indicator {
+  color: #1c4f96;
+}
+
+.project-indicator span {
+  display: inline-block;
+  transition: transform .3s var(--ease);
+}
+
+.project-card:hover .project-indicator span, .project-card:focus-visible .project-indicator span {
+  transform: translate(3px,-3px);
+}
+
 .skill-list {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
